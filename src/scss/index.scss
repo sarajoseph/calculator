@@ -1,4 +1,62 @@
-*{
-	background-color: #FFFFFF;
-	color: #000000;
+@import 'fonts';
+@import 'reset';
+@import 'variables';
+
+body{
+	background-attachment: fixed;
+	background-color: #c687cf;
+	background-image: linear-gradient(to bottom left, #ffd8a4, #c687cf);
+}
+
+.calculator{
+	background-color: $white;
+	border-radius: 10px;
+	box-shadow: 7px 7px 0px 5px #00000030;
+	padding: 20px;
+	margin: 10px;
+	width: fit-content;
+
+	&__screen{
+		border: 1px solid #d3dde5;
+		border-radius: 5px;
+		color: $numbers;
+		font-family: 'Lato';
+		font-size: 40px;
+		margin-bottom: 20px;
+		padding: 5px 10px;
+		text-align: right;
+	}
+
+	&__buttons{
+		column-gap: 10px;
+		display: grid;
+		font-family: 'Lato';
+		grid-template-columns: repeat(4, 50px);
+		grid-template-rows: repeat(5, 50px);
+    row-gap: 10px;
+		.button{
+			align-items: center;
+			align-content: center;
+			background-color: #f0f1f2;
+			border-radius: 50px;
+			box-shadow: 3px 3px 3px -1px #00000030;
+			color: $numbers;
+			cursor: pointer;
+			display: flex;
+			font-size: 20px;
+			font-weight: bold;
+			justify-content: center;
+			&--operator{
+				background-color: #d3dde5;
+			}
+			&--equal{
+				background-color: #20ceb2;
+				color: $white;
+			}
+			&--delete{				
+				background-color: #ff7077;
+				color: $white;
+			}
+		}
+	}
 }
