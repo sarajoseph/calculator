@@ -21,10 +21,23 @@ body{
 		border-radius: 5px;
 		color: $numbers;
 		font-family: 'Lato';
-		font-size: 40px;
+		min-height: 60px;
 		margin-bottom: 20px;
+		max-width: 230px;
 		padding: 5px 10px;
 		text-align: right;
+		word-wrap: break-word;
+		word-break: break-all;
+		&:focus-visible{
+			border: 1px solid #d3dde5;
+			outline: unset;
+		}
+		&--previous-value{
+			font-size: 20px;
+		}
+		&--current-value{
+			font-size: 40px;
+		}
 	}
 
 	&__buttons{

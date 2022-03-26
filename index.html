@@ -6,34 +6,36 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>sarajoseph.github.io/calculator</title>
 	<link rel="stylesheet" href="./build/styles.css">
-	<script src="./build/main.js"></script>
+	<script src="./build/main.js" defer></script>
 </head>
 <body>
 	<div class="calculator">
-		<div class="calculator__screen" id="calculatorScreen">
-			100
+		<!--<input class="calculator__screen" id="calculatorScreen" type="text" readonly/>-->
+		<div class="calculator__screen" id="calculatorScreen"/>
+			<div class="calculator__screen--previous-value" id="calculatorScreenPreviousValue"></div>
+			<div class="calculator__screen--current-value" id="calculatorScreenCurrentValue"></div>
 		</div>
 		<div class="calculator__buttons">
-			<div class="button button--delete">C</div>
+			<div class="button button--delete" id="btnDeleteAll">C</div>
 			<div class="button button--operator">()</div>
-			<div class="button button--operator">%</div>
-			<div class="button button--operator">÷</div>
-			<div class="button">7</div>
-			<div class="button">8</div>
-			<div class="button">9</div>
-			<div class="button button--operator">x</div>
-			<div class="button">4</div>
-			<div class="button">5</div>
-			<div class="button">6</div>			
-			<div class="button button--operator">-</div>
-			<div class="button">1</div>
-			<div class="button">2</div>
-			<div class="button">3</div>
-			<div class="button button--operator">+</div>
+			<div class="button button--operator" id="btnPercentage">%</div>
+			<div class="button button--operator" id="btnDivide">÷</div>
+			<div class="button button-number">7</div>
+			<div class="button button-number">8</div>
+			<div class="button button-number">9</div>
+			<div class="button button--operator" id="btnTimes">x</div>
+			<div class="button button-number">4</div>
+			<div class="button button-number">5</div>
+			<div class="button button-number">6</div>			
+			<div class="button button--operator" id="btnMinus">-</div>
+			<div class="button button-number">1</div>
+			<div class="button button-number">2</div>
+			<div class="button button-number">3</div>
+			<div class="button button--operator" id="btnPlus">+</div>
 			<div class="button button--operator">+/-</div>
-			<div class="button">0</div>
-			<div class="button button--operator">.</div>
-			<div class="button button--equal">=</div>
+			<div class="button button-number">0</div>
+			<div class="button button--operator" id="btnDecimal">.</div>
+			<div class="button button--equal" id="btnEquals">=</div>
 		</div>
 	</div>
 </body>
